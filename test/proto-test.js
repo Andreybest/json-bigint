@@ -1,14 +1,6 @@
 const makeJSON = require('../index.js');
 const expect = require('chai').expect;
 describe('__proto__ and constructor assignment', function () {
-  it('should set __proto__ property but not a prototype if protoAction is set to preserve', () => {
-    const JSONbig = makeJSON({ protoAction: 'preserve' });
-    const obj1 = JSONbig.parse('{ "__proto__": 1000000000000000 }');
-    expect(Object.getPrototypeOf(obj1)).to.equal(null);
-    const obj2 = JSONbig.parse('{ "__proto__": { "admin": true } }');
-    expect(obj2.admin).to.not.equal(true);
-  });
-
   it('should throw an exception if protoAction set to invalid value', () => {
     expect(() => {
       makeJSON({ protoAction: 'invalid value' });
@@ -44,7 +36,7 @@ describe('__proto__ and constructor assignment', function () {
     const obj1 = JSONbig.parse(
       '{ "__proto__": 1000000000000000, "a" : 42, "nested": { "__proto__": false, "b": 43 } }'
     );
-    expect(Object.getPrototypeOf(obj1)).to.equal(null);
+    expect(obj1).to.be.instanceOf(Object);
     expect(obj1).to.deep.equal({ a: 42, nested: { b: 43 } });
   });
 

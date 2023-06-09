@@ -1,5 +1,11 @@
 # json-bigint
 
+# My version
+
+This version replaces Object.create(null) with {}. Object.create(null) creates object without prototype (new object will not be a child of Object), and thus will not have toString, toLocaleString, valueOf and etc.
+
+
+
 [![Build Status](https://secure.travis-ci.org/sidorares/json-bigint.png)](http://travis-ci.org/sidorares/json-bigint)
 [![NPM](https://nodei.co/npm/json-bigint.png?downloads=true&stars=true)](https://nodei.co/npm/json-bigint/)
 
