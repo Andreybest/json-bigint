@@ -1,16 +1,16 @@
 {
   "name": "@andreybest/json-bigint",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "JSON.parse with bigints support",
   "main": "index.js",
+  "types": "index.d.ts",
   "files": [
     "index.js",
     "lib/parse.js",
     "lib/stringify.js"
   ],
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha -R spec --check-leaks test/*-test.js",
-    "publish": "npm publish --access public"
+    "test": "./node_modules/mocha/bin/mocha -R spec --check-leaks test/*-test.js"
   },
   "repository": {
     "type": "git",
