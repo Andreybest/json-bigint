@@ -9,8 +9,8 @@ describe("Testing if object returns in parse function", function () {
         storeAsString: true
     });
     const obj = JSONbig.parse(input);
-    expect(obj, "parsed subobject").to.be.instanceOf(Object);
     expect(obj, "parsed object").to.be.instanceOf(Object);
+    expect(obj, "parsed subobject").to.be.instanceOf(Object);
     done();
   });
 
