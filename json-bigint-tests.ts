@@ -9,6 +9,7 @@ const jsonObject = { a: 'b' };
 JSONBig({
     useNativeBigInt: true,
     alwaysParseAsBig: false,
+    useOldNumberParser: true,
     constructorAction: 'error',
     protoAction: 'preserve',
     storeAsString: undefined,

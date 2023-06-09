@@ -27,6 +27,11 @@ interface Options {
      */
     useNativeBigInt?: boolean | undefined;
     /**
+     * Use old number parser (v0.4.0) instead of new one
+     * @default false
+     */
+    useOldNumberParser?: boolean | undefined;
+    /**
      * @default 'error'
      */
     protoAction?: 'error' | 'ignore' | 'preserve' | undefined;
