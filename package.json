@@ -1,11 +1,12 @@
 {
   "name": "@andreybest/json-bigint",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "JSON.parse with bigints support",
   "main": "index.js",
   "types": "index.d.ts",
   "files": [
     "index.js",
+    "index.d.ts",
     "lib/parse.js",
     "lib/stringify.js"
   ],
